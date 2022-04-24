@@ -131,4 +131,4 @@ dmypy.json
 .idea
 .vscode
 
-.exe
+*.exe

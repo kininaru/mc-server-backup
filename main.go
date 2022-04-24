@@ -18,7 +18,7 @@ func main() {
 		_ = os.Mkdir("./mc-backup", 0777)
 	}
 	filename := "backup" + strconv.Itoa(int(time.Now().UnixNano())) + ".zip"
-	zip_tools.ToZip("./test", "./mc-backup/"+filename)
+	zip_tools.ToZip("./mc", "./mc-backup/"+filename)
 	fmt.Println("Zipping finished. Uploading...")
 	upload.ToAliyun(os.Args[1], os.Args[2], os.Args[3], os.Args[4], filename)
 	fmt.Println("Finished. Filename is " + filename)
